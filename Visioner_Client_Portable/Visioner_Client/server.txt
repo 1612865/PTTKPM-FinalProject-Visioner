@@ -1,0 +1,1 @@
+http://demo.unicore.asia:9990/api/upload/

@@ -1,0 +1,105 @@
+<% include ../partials/headTag %>
+
+<body id="page-top">
+  <% include ../partials/banner %>
+  <div id="wrapper">
+    <%include ../partials/sidebar %>
+
+    <div id="content-wrapper">
+
+      <div class="container-fluid">
+
+        <% include ../partials/breadcrum %>
+
+        <!-- DataTables Example -->
+        <div class="card mb-3">
+          <div class="card-header">
+            <i class="fas fa-table"></i>
+            Camera List</div>
+          <div class="card-body">
+            <span class="md-4" style="display: block">
+                <h1 style="display: inline">Camera Price: </h1>
+                <i><h1 style="display: inline" id="txtCameraPrice"></h1></i>
+            </span>
+            <button id="btn-add-camera" type="button" class="btn btn-success mb-4">
+              <span><i class="fa fa-plus"></i></span>
+              <span>Buy camera</span></button>
+            <div class="table-responsive">
+              <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                <thead>
+                  <tr>
+                    <th>ID</th>
+                    <th>Key</th>
+                    <th>Output Source</th>
+                    <th>Output Type</th>
+                    <th>Modify</th>
+                  </tr>
+                </thead>
+                <tfoot>
+                  <tr>
+                    <th>ID</th>
+                    <th>Key</th>
+                    <th>Output Source</th>
+                    <th>Output Type</th>
+                    <th>Modify</th>
+                  </tr>
+                </tfoot>
+                <tbody>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- /.container-fluid -->
+
+      <% include ../partials/footer %>
+
+    </div>
+    <!-- /.content-wrapper -->
+
+    <!-- Modal -->
+    <div class="modal fade" id="modifyCameraModal" tabindex="-1" role="dialog" aria-labelledby="modifyCameraModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modifyCameraModalLabel">Modify Camera</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="container-fluid">
+              <input hidden id="camera_id"/>
+                <div class="form-group">
+                    <label for="inputOutputSource" class="col-form-label">Output source:</label>
+                    <input type="text" class="form-control" id="inputOutputSource">
+                  </div>
+                  <div class="form-group">
+                      <label for="inputOutputType" class="col-form-label">Output type:</label>
+                      <select class="form-control" id="inputOutputType">
+                          <option value="json">json</option>
+                          <option value="xml">xml</option>
+                        </select>
+                    </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button id="btn-confirm-save" type="button" class="btn btn-primary">Save changes</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- /#wrapper -->
+
+  <% include ../partials/scrolltop %>
+
+  <% include ../partials/jsTag %>
+  <% include ../partials/jsDashboard %>
+
+</body>
+
+</html>

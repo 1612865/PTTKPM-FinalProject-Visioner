@@ -1,0 +1,149 @@
+<% include ../partials/headTag %>
+
+<body id="page-top">
+  <% include ../partials/banner %>
+  <div id="wrapper">
+    <%include ../partials/sidebar %>
+
+    <div id="content-wrapper">
+
+      <div class="container-fluid">
+
+        <% include ../partials/breadcrum.ejs %>
+
+        <div class="card">
+          <div class="card-header">Authenication detail</div>
+          <div class="card-body">
+            <div class="form-group">
+              <div class="form-row">
+                <div class="col-md-6">
+                  <div class="form-label-group">
+                    <input class="form-control" type="text" id="txtUsername" readonly />
+                    <label for="txtUsername">Username</label>
+                  </div>
+
+                </div>
+                <div class="col-md-6">
+                  <div class="form-label-group">
+                    <input class="form-control" type="text" id="txtEmail" readonly />
+                    <label for="txtEmail">Email</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="form-row">
+                <div class="col-md-6">
+                  <div class="form-label-group">
+                    <input class="form-control" type="password" id="inputPassword" />
+                    <label for="inputPassword">Password</label>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-label-group">
+                    <input class="form-control" type="password" id="confirmPassword" />
+                    <label for="confirmPassword">Confirm password</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button class="btn btn-primary btn-block" id="btn-register">Update password</button>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header">Personal information detail</div>
+          <div class="card-body">
+            <div class="form-group">
+              <div class="form-row">
+                <div class="col-md-6">
+                  <div class="form-label-group">
+                    <input class="form-control" type="text" id="inputFullname" />
+                    <label for="inputFullname">Fullname</label>
+                  </div>
+
+                </div>
+                <div class="col-md-6">
+                  <div class="form-label-group">
+                    <input class="form-control" type="text" id="inputCompanyName" />
+                    <label for="inputCompanyName">Company name</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="form-row">
+                <div class="col-md-6">
+                  <div class="form-label-group">
+                    <input class="form-control" type="text" id="inputDoB" />
+                    <label for="inputDoB">Date of Birth</label>
+                  </div>
+
+                </div>
+                <div class="col-md-6">
+                  <div class="form-label-group">
+                    <input class="form-control" type="text" id="inputPhone" />
+                    <label for="inputPhone">Phone No</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="form-row">
+                <div class="col-md-12">
+                  <div class="form-label-group">
+                    <input class="form-control" type="text" id="inputAddress" />
+                    <label for="inputAddress">Address</label>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="form-row">
+                <div class="col-md-6">
+                  <div class="form-label-group">
+                    <input class="form-control" type="text" id="inputCitizenID" />
+                    <label for="inputCitizenID">Citizen ID</label>
+                  </div>
+
+                </div>
+                <div class="col-md-6">
+                  <div class="form-label-group">
+                    <input class="form-control" type="text" id="inputPassportID" />
+                    <label for="inputPhone">Passport ID</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="form-row">
+                <div class="col-md-12">
+                  <div class="form-label-group">
+                    <input class="form-control" type="text" id="txtCredit" readonly />
+                    <label for="txtCredit">Credit</label>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+            <button class="btn btn-primary btn-block" id="btn-update-info">Update</button>
+          </div>
+        </div>
+
+
+        <% include ../partials/footer %>
+
+      </div>
+      <!-- /.content-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+    <% include ../partials/scrolltop %>
+
+    <% include ../partials/jsTag %>
+    <% include ../partials/jsDashboard %>
+</body>
+
+</html>
